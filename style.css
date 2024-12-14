@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+header {
+    background: #e60023;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+header p {
+    margin: 5px 0;
+}
+header a {
+    color: white;
+    text-decoration: none;
+}
+header a:hover {
+    text-decoration: underline;
+}
+section{
+    padding: 20px; 
+    text-align: center; 
+    background-color: #050000; 
+    color: #fcfafa;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin: 20px auto;
+}
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.flip-card-front {
+    background-size: cover;
+    background-position: center;
+}
+.flip-card:nth-child(1) .flip-card-front {
+    background-image: url(pint3.jpg);
+}
+.flip-card:nth-child(2) .flip-card-front {
+    background-image: url(pint6.jpg);
+}
+.flip-card:nth-child(3) .flip-card-front {
+    background-image: url(pint1.jpg);
+}
+.flip-card:nth-child(4) .flip-card-front {
+    background-image: url(pint7.jpg);
+}
+.flip-card:nth-child(5) .flip-card-front {
+    background-image: url(pint8.jpg);
+}
+.flip-card:nth-child(6) .flip-card-front {
+    background-image: url(pint9.jpg);
+}
+.flip-card-back {
+    background-color: #222;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+h2 {
+    color: #e60023;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+h2::before {
+    content: "\2665"; /* Heart icon */
+    font-size: 1.2rem;
+    color: #e60023;
+    margin-right: 8px;
+}
+p, ul {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    margin-bottom: 10px;
+}
+ul li a {
+    color: #e60023;
+    text-decoration: underline;
+}
+ul li a:hover {
+    text-decoration: underline;
+}
