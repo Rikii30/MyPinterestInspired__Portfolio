@@ -131,14 +131,15 @@ ul li a:hover {
     text-decoration: underline;
 }
 
-/* Make cards flip on click for touch devices */
+/* Disable hover effect on touch screens */
 @media (hover: none) and (pointer: coarse) {
-    .flip-card-inner {
-        cursor: pointer;
+    .flip-card:hover .flip-card-inner {
+        transform: none;
     }
 }
 
-/* Flip effect on click */
+/* Flip effect toggle for touch/click */
 .flipped {
     transform: rotateY(180deg);
 }
+
