@@ -114,10 +114,15 @@ leveraging strong analytical and problem-solving skills to contribute effectivel
             </div>
         </div>
             <!-- Allow card flip on click for mobile users -->
+<!-- Flip card on click (mobile support + only one flipped at a time) -->
 <script>
-    // Add click event to flip cards on mobile
     document.querySelectorAll('.flip-card').forEach(card => {
         card.addEventListener('click', function () {
+            document.querySelectorAll('.flip-card-inner').forEach(inner => {
+                if (inner !== this.querySelector('.flip-card-inner')) {
+                    inner.classList.remove('flipped');
+                }
+            });
             this.querySelector('.flip-card-inner').classList.toggle('flipped');
         });
     });
@@ -126,4 +131,5 @@ leveraging strong analytical and problem-solving skills to contribute effectivel
                 
     
 </body>
+</html>
                 
