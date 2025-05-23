@@ -65,6 +65,11 @@ section{
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
+/* Add this to style.css */
+.flipped {
+    transform: rotateY(180deg) !important;
+}
+
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
